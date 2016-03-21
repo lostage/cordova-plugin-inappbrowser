@@ -151,6 +151,10 @@
     if (browserOptions.closebuttoncaption != nil) {
         [self.inAppBrowserViewController setCloseButtonTitle:browserOptions.closebuttoncaption];
     }
+
+    //add this here so it will change the color of the button regardless of the browserOptions.closebuttoncaption being passed
+    self.inAppBrowserViewController.closeButton.tintColor =[UIColor whiteColor];
+
     // Set Presentation Style
     UIModalPresentationStyle presentationStyle = UIModalPresentationFullScreen; // default
     if (browserOptions.presentationstyle != nil) {
